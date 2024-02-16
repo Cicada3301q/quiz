@@ -1,0 +1,117 @@
+body {
+    /* font-family: Arial, sans-serif; */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #2700b3;
+}
+
+.btn-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, auto);
+}
+
+.btn-block {
+    grid-column: 1 / -1;
+}
+
+.btn.correct {
+    background-color: #28a745; /* Green for correct */
+}
+
+.btn.incorrect {
+    background-color: #dc3545; /* Red for incorrect */
+}
+
+#continue-button {
+    /* Custom styles for the "Continue" button */
+    background-color: #28a745; /* Example: Green background */
+}
+
+#continue-button:hover {
+    /* Example hover effect */
+    background-color: #218838;
+}
+
+.hide {
+    display: none;
+}
+
+body {
+    background-image: url('trivia.jpg');
+    background-size: contain;
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+
+.container {
+    border: 2px solid #007bff; /* Solid blue border */
+    background-color: #0056b3;
+    padding: 20px; /* Space between the content and the border */
+    margin: 10px; /* Space outside the border */
+    /* Add any other styling needed */
+}
+
+.text-container {
+    background-color: rgba(255, 255, 255, 0.5); /* White with 50% opacity */
+    padding: 20px;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-image: url('trivia.jpg'); */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Adjust the opacity for visibility */
+    z-index: -1; /* Ensure the overlay is behind the content */
+}
+
+#current-difficulty {
+    position: absolute;
+    top: 10px; 
+    left: 10px; /* Adjust the spacing from the left edge */
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background for readability */
+    font-weight: bold;
+}
+
+#high-score {
+    position: absolute;
+    top: 10px; /* Adjust the spacing from the top edge */
+    right: 10px; /* Adjust the spacing from the right edge */
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background for readability */
+    font-weight: bold;
+}
